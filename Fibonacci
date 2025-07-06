@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class mainClass {
+    public static void main(String[] arg){
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int a = in.nextInt();
+        int[] x = new int[a];
+        int m = 0, n=1;
+
+        if (a == 0){
+            System.out.println("Your fibonacci series: "+m);
+        }
+
+        else if (a == 1){
+            System.out.println("Your fibonacci series: "+m);
+            System.out.println(n);
+        }
+
+        else{
+            System.out.println("Your fibonacci series: ");
+            System.out.println(m);
+            System.out.println(n);
+            for(int i = 0; i<a-2; i++){
+
+                x[i] = m+n;
+                System.out.println(x[i]);
+                m= n;
+                n= x[i];
+            }
+        }
+        in.close();
+    }
+
+}
