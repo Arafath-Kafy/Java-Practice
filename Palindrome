@@ -1,0 +1,31 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class mainClass {
+    public static void main(String[] arg){
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a String: ");
+
+        String st = in.nextLine();
+        int stl = st.length();
+        String st2 = "";
+        for(int i=stl-1; i>=0; i--){
+            st2 += st.charAt(i);
+        }
+        System.out.println("Original String: " +st);
+        System.out.println("Palindrome String: " +st2);
+
+        if(st.equalsIgnoreCase(st2))
+        {
+            System.out.println("This string is palindrome");
+        }
+        else{
+            System.out.println("Not a palindrome");
+        }
+
+        in.close();
+    }
+
+}
